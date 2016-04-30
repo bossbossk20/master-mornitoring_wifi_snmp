@@ -6,8 +6,7 @@
   var snmp = require('snmp-native')
   var host = '10.41.160.1'
   var community = 'public'
-  var wifiscanner = require('wifiscanner')
-  var scanner = wifiscanner()
+  const scanner = require('node-wifi-scanner')
 
   router.get('/detail', function (req, res, next) {
     var session = new snmp.Session({ host: host, community: community })
@@ -49,13 +48,13 @@
   })
 
   router.get('/wifi', function (req, res, next) {
-    scanner.scan(function (error, networks) {
-      if (error) {
-        console.error(error)
-      } else {
-        console.dir(networks)
-        res.send(networks)
+    scanner.scan((err, networks) => {
+      if (err) {
+        console.error(err)
+        return
       }
+      console.log(networks)
+      res.send(networks)
     })
   })
 
