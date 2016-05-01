@@ -37,7 +37,7 @@
   })
 
   router.get('/speed', function (req, res, next) {
-    var test = speedTest({maxTime: 5000})
+    var test = speedTest({maxTime: 8000})
     test.on('data', function (data) {
       console.log(data)
       res.send(data)
