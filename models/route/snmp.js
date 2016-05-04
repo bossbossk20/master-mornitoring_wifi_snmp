@@ -33,7 +33,7 @@
         console.log('Fail :(')
       } else {
         varbinds.forEach(function (vb) {
-          value.push(vb.value)
+          value.push({'interface':vb.value})
           console.log(vb.oid + ' = ' + vb.value + ' (' + vb.type + ')')
         })
         res.send(value)
@@ -47,8 +47,9 @@
         console.log(err)
       } else {
         this.vb = varbinds[0]
-        console.log(timestamp(this.vb.value))
-        console.log('uptime"' + this.vb.value + '"')
+        this.v = timestamp(this.vb.value)
+        console.log(this.v)
+        res.send(this.vb)
       }
       session.close()
     })
