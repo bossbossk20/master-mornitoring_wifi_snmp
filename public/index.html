@@ -20,26 +20,14 @@
         <ul class="nav navbar-nav">
         <li id="wifi" ng-click="app.wifi()"><a href="#">WIFI</a></li>
         <li id="system" ng-click="app.system()"><a href="#">System</a></li>
-        <li id="uptime"><a href="#">Uptime</a></li>
-        <li id="vlan"><a href="#">Vlan & Port</a></li>
-        <li id="bandwidth"><a href="#">Bandwidth</a></li>
-        <!-- <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li> -->
+        <li id="uptime" ng-click="app.uptime()"><a href="#">Uptime</a></li>
+        <li id="vlan" ng-click="app.vlan()"><a href="#">Vlan & Port</a></li>
+        <li id="bandwidth" ng-click="app.bandwidth()"><a href="#">Bandwidth</a></li>
       </ul>
       </div>
     </nav>
     <div class="container">
-      <div class="wifi">
+      <div class="wifi" id="wifi">
           <br>
           <br>
           <h1>WIFI</h1>
@@ -52,7 +40,7 @@
           </div>
         </div>
       </div>
-      <div class="system">
+      <div class="system" id="system">
         <br>
         <br>
         <h1>SYSTEM</h1>
@@ -60,7 +48,7 @@
             <h3>{{app.detail}}</h3>
           </div>
       </div>
-      <div class="uptime">
+      <div class="uptime" id="uptime">
         <br>
         <br>
         <h1>UPTIME</h1>
@@ -68,7 +56,9 @@
             <h3>{{app.timee(app.uptime)}}</h3>
           </div>
       </div>
-      <div class="interface">
+      <div class="interface" id="interface">
+        <br>
+        <br>
         <h1>VLAN & PORT</h1>
          <div class="col-xs-12">
             <h3 ng-repeat="interface in app.interfaces">
@@ -76,7 +66,9 @@
             </h3>
          </div>
       </div>
-      <div class="speed">
+      <div class="speed" id="bandwidth">
+        <br>
+        <br>
         <h1>Bandwidth</h1>
          <div class="col-xs-12">
             <h3>

@@ -31,11 +31,65 @@ angular.module('app', [])
         return humanizeDuration(timee)
       }
       app.wifi = function () {
-         $( "#wifi" ).removeClass( "active" )
+          $( "#system" ).removeClass( "active" )
+          $( "#uptime" ).removeClass( "active" )
+          $( "#vlan" ).removeClass( "active" )
+          $( "#bandwidth" ).removeClass( "active" )
           $( "#wifi" ).addClass( "active" )
+          $( ".wifi" ).show()
+          $( ".system").hide()
+          $( ".uptime" ).hide()
+          $( ".interface" ).hide()
+          $( ".speed" ).hide()
       }
       app.system = function () {
-          $( "#system" ).removeClass( "active" )
           $( "#system" ).addClass( "active" )
+          $( "#wifi" ).removeClass( "active" )
+          $( "#uptime" ).removeClass( "active" )
+          $( "#vlan" ).removeClass( "active" )
+          $( "#bandwidth" ).removeClass( "active" )
+          $( ".wifi" ).hide()
+          $( ".system" ).show()
+          $( ".uptime" ).hide()
+          $( ".interface" ).hide()
+          $( ".speed" ).hide()
+
+      }
+      app.uptime = function () {
+        $( "#uptime" ).addClass( "active" )
+        $( "#system" ).removeClass( "active" )
+        $( "#wifi" ).removeClass( "active" )
+        $( "#bandwidth" ).removeClass( "active" )
+        $( "#vlan" ).removeClass( "active" )
+        $( ".wifi" ).hide()
+        $( ".system" ).hide()
+        $( ".uptime" ).show()
+        $( ".interface" ).hide()
+        $( ".speed" ).hide()
+
+      }
+      app.vlan = function () {
+         $( "#vlan" ).addClass( "active" )
+         $( "#uptime" ).removeClass( "active" )
+         $( "#system" ).removeClass( "active" )
+         $( "#wifi" ).removeClass( "active" )
+         $( "#bandwidth" ).removeClass( "active" )
+         $( ".wifi" ).hide()
+         $( ".system" ).hide()
+         $( ".uptime" ).hide()
+         $( ".interface" ).show()
+         $( ".speed" ).hide()
+      }
+      app.bandwidth = function () {
+        $( "#bandwidth" ).addClass( "active" )
+        $( "#wifi" ).removeClass( "active" )
+        $( "#system" ).removeClass( "active" )
+        $( "#vlan" ).removeClass( "active" )
+        $( "#uptime" ).removeClass( "active" )
+        $( ".wifi" ).hide()
+        $( ".system" ).hide()
+        $( ".uptime" ).hide()
+        $( ".interface" ).hide()
+        $( ".speed" ).show()
       }
   });
