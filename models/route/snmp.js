@@ -34,7 +34,7 @@
       } else {
         varbinds.forEach(function (vb) {
           var ss = vb.value
-          console.log(ss.substr(0, 1))
+          // console.log(ss.substr(0, 1))
           if (ss.substr(0, 1)=='V') {
               value.push({'vlan':vb.value})
           }else if(ss.substr(0, 1)=='G'){
