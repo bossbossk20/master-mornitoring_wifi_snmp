@@ -55,7 +55,7 @@ angular.module('app', [])
           $( ".speed" ).hide()
 
       }
-      app.uptime = function () {
+      app.time = function () {
         $( "#uptime" ).addClass( "active" )
         $( "#system" ).removeClass( "active" )
         $( "#wifi" ).removeClass( "active" )
@@ -66,7 +66,6 @@ angular.module('app', [])
         $( ".uptime" ).show()
         $( ".interface" ).hide()
         $( ".speed" ).hide()
-
       }
       app.vlan = function () {
          $( "#vlan" ).addClass( "active" )
