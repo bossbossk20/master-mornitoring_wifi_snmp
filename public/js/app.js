@@ -27,6 +27,16 @@ angular.module('app', [])
             }).error(function(data, status, headers, config) {
                 console.log('error')
             })
+            $( "#system" ).removeClass( "active" )
+            $( "#uptime" ).removeClass( "active" )
+            $( "#vlan" ).removeClass( "active" )
+            $( "#bandwidth" ).removeClass( "active" )
+            $( "#wifi" ).addClass( "active" )
+            $( ".wifi" ).show()
+            $( ".system").hide()
+            $( ".uptime" ).hide()
+            $( ".interface" ).hide()
+            $( ".speed" ).hide()
       app.timee = function (timee) {
         return humanizeDuration(timee)
       }
