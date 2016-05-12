@@ -33,8 +33,13 @@
         console.log('Fail :(')
       } else {
         varbinds.forEach(function (vb) {
-          value.push({'interface':vb.value})
-          console.log(vb.oid + ' = ' + vb.value + ' (' + vb.type + ')')
+          var ss = vb.value
+          console.log(ss.substr(0, 1))
+          if (ss.substr(0, 1)=='V') {
+              value.push({'vlan':vb.value})
+          }else if(ss.substr(0, 1)=='G'){
+              value.push({'interface':vb.value})
+          }
         })
         res.send(value)
       }
