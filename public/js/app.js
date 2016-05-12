@@ -37,6 +37,7 @@ angular.module('app', [])
             $( ".uptime" ).hide()
             $( ".interface" ).hide()
             $( ".speed" ).hide()
+            $( ".mac" ).hide()
       app.timee = function (timee) {
         return humanizeDuration(timee)
       }
@@ -51,6 +52,7 @@ angular.module('app', [])
           $( ".uptime" ).hide()
           $( ".interface" ).hide()
           $( ".speed" ).hide()
+          $( "#mac" ).removeClass( "active" )
       }
       app.system = function () {
           $( "#system" ).addClass( "active" )
@@ -63,6 +65,8 @@ angular.module('app', [])
           $( ".uptime" ).hide()
           $( ".interface" ).hide()
           $( ".speed" ).hide()
+          $( ".mac" ).hide()
+          $( "#mac" ).removeClass( "active" )
 
       }
       app.time = function () {
@@ -76,6 +80,8 @@ angular.module('app', [])
         $( ".uptime" ).show()
         $( ".interface" ).hide()
         $( ".speed" ).hide()
+        $( ".mac" ).hide()
+        $( "#mac" ).removeClass( "active" )
       }
       app.vlan = function () {
          $( "#vlan" ).addClass( "active" )
@@ -88,6 +94,8 @@ angular.module('app', [])
          $( ".uptime" ).hide()
          $( ".interface" ).show()
          $( ".speed" ).hide()
+         $( ".mac" ).hide()
+         $( "#mac" ).removeClass( "active" )
       }
       app.bandwidth = function () {
         $( "#bandwidth" ).addClass( "active" )
@@ -100,5 +108,21 @@ angular.module('app', [])
         $( ".uptime" ).hide()
         $( ".interface" ).hide()
         $( ".speed" ).show()
+        $( ".mac" ).hide()
+        $( "#mac" ).removeClass( "active" )
+      }
+      app.mac = function () {
+        $( "#bandwidth" ).removeClass( "active" )
+        $( "#wifi" ).removeClass( "active" )
+        $( "#system" ).removeClass( "active" )
+        $( "#vlan" ).removeClass( "active" )
+        $( "#uptime" ).removeClass( "active" )
+        $( ".wifi" ).hide()
+        $( ".system" ).hide()
+        $( ".uptime" ).hide()
+        $( ".interface" ).hide()
+        $( ".speed" ).hide()
+        $( ".mac" ).show()
+        $( "#mac" ).addClass( "active" )
       }
   });

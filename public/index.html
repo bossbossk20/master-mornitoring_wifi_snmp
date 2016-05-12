@@ -23,6 +23,7 @@
         <li id="uptime" ng-click="app.time()"><a href="#">Uptime</a></li>
         <li id="vlan" ng-click="app.vlan()"><a href="#">Vlan & Port</a></li>
         <li id="bandwidth" ng-click="app.bandwidth()"><a href="#">Bandwidth</a></li>
+        <li id="mac" ng-click="app.mac()"><a href="#">Mac Address AP</a></li>
       </ul>
       </div>
     </nav>
@@ -76,6 +77,16 @@
               Upload : {{app.speed.upload}}
             </h3>
          </div>
+      </div>
+      <div class="mac" id="mac">
+          <br>
+          <br>
+          <h1>MAC ADDRESS of Acess Point</h1>
+          <div class="col-xs-12" ng-repeat="wifi in app.wifis">
+            <h1>
+              MAC ADDRESS: {{wifi.mac}}
+            </h1>
+        </div>
       </div>
     </div>
   </body>

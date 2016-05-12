@@ -74,5 +74,15 @@
       res.send(networks)
     })
   })
+  router.get('/mac', function (req, res, next) {
+    scanner.scan((err, networks) => {
+      if (err) {
+        console.error(err)
+        return
+      }
+      console.log(networks)
+      res.send(networks)
+    })
+  })
   module.exports = router
 })()
