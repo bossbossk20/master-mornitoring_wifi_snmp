@@ -27,12 +27,17 @@ angular.module('app', [])
             }).error(function(data, status, headers, config) {
                 console.log('error')
             })
+            app.load = true
+            app.content = true
+            setTimeout(function(){
+              app.content = false
+              app.load = false
+            }, 2000)
             $( "#system" ).removeClass( "active" )
             $( "#uptime" ).removeClass( "active" )
             $( "#vlan" ).removeClass( "active" )
             $( "#bandwidth" ).removeClass( "active" )
             $( "#wifi" ).addClass( "active" )
-            $( ".wifi" ).show()
             $( ".system").hide()
             $( ".uptime" ).hide()
             $( ".interface" ).hide()
@@ -52,6 +57,7 @@ angular.module('app', [])
           $( ".uptime" ).hide()
           $( ".interface" ).hide()
           $( ".speed" ).hide()
+          $( ".mac" ).hide()
           $( "#mac" ).removeClass( "active" )
       }
       app.system = function () {
