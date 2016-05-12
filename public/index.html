@@ -9,6 +9,7 @@
      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
      <script src="js/app.js"></script>
      <script src="js/lib.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
     <title>SNMP</title>
   </head>
 
@@ -83,9 +84,12 @@
         <h1>Bandwidth</h1>
          <div class="col-xs-12">
             <h3>
-              Download : {{app.speed.download}}
-              Upload : {{app.speed.upload}}
+              Download : {{app.speed.download}} Mbps
+              Upload : {{app.speed.upload}} Mbps
             </h3>
+            <center>
+                <canvas id="income" width="600" height="400"></canvas>
+            </center>
          </div>
       </div>
       <div class="mac" id="mac">

@@ -24,6 +24,18 @@ angular.module('app', [])
         $http.get('/speed'). success(function(response) {
            app.speed  = response.speeds
            console.log(app.speed)
+           var barData = {
+               labels : ["Download","Upload"],
+               datasets : [
+                   {
+                       fillColor : "#00ffab",
+                       strokeColor : "#ffffff",
+                       data : [app.speed.download,app.speed.upload]
+                   }
+               ]
+           }
+           var income = document.getElementById("income").getContext("2d");
+           new Chart(income).Bar(barData);
             }).error(function(data, status, headers, config) {
                 console.log('error')
             })
