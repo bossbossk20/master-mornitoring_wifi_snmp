@@ -4,7 +4,7 @@
 $ git clone https://github.com/bossbossk20/monitor-using-snmp.git
 $ cd monitor-using-snmp
 $ npm install
-$ npm i node-wifi-scanner
+
 ```
 ### how to run
 ```
