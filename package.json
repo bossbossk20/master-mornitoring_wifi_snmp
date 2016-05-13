@@ -11,6 +11,7 @@
   "dependencies": {
     "express": "^4.13.4",
     "moment": "^2.13.0",
+    "node-wifi-scanner": "^1.0.0",
     "snmp-native": "^1.0.21",
     "speedtest-net": "^1.2.5",
     "wifiscanner": "0.0.10"
