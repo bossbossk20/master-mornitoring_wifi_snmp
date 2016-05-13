@@ -12,3 +12,5 @@ $ npm start
 ```
 
 ![ screenshot](screen.png)
+
+![ screenshot](http://werehumans.com/wp-content/uploads/2015/10/1436439824nodejs-logo.png)
